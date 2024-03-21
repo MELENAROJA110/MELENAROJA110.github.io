@@ -1,165 +1,158 @@
-* {
-    font-family: 'roboto';
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
-
+/*Síguenos en todas las redes como:*/
+/*Faster Academy*/
+/*Código: Daniel Arteaga de Faster Academy*/
+body {
+  background-color: #000;
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* Asegura que el cuerpo ocupe toda la altura de la ventana */
+  display: flex;
+  align-items: center; /* Centra verticalmente los elementos en el cuerpo */
+  justify-content: center; /* Centra horizontalmente los elementos en el cuerpo */
 }
+.flower {
+  height: 200px;
+  width: 200px;
+  margin: 20px auto;
 
-header {
-    min-height: 110px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
-    flex-direction: row;
-    text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
+  position: relative;
+  background-color: #000; /* Fondo negro para toda la página */
 
-
+  /* Agrega una animación de pulsación */
+  animation: pulsate 2s infinite;
 }
-
-.icono_header {}
-
-.icono_header img {
-    height: 80px;
+/*Síguenos en todas las redes como:*/
+/*Faster Academy*/
+/*Código: Daniel Arteaga de Faster Academy*/
+.text-above,
+.text-below {
     position: absolute;
-    left: 1%;
-    top: 0.6em;
-    margin-left: 5px;
-
-
-
-
+    text-align: center;
+    color: #fff; /* Color del texto */
+    font-size: 25px; /* Tamaño del texto */
 }
 
-
-
-nav a {
-    font-size: 2em;
-    padding: 15px;
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
-
+.text-above {
+    top: -60px; /* Ajusta la posición vertical del texto arriba de la flor */
 }
 
-nav a:hover {
-    color: #ee1b22
+.text-below {
+    bottom: -60px; /* Ajusta la posición vertical del texto debajo de la flor */
 }
-
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+@keyframes pulsate {
+  0% {
+      transform: scale(1.5);
+  }
+  50% {
+      transform: scale(1.6);
+  }
+  100% {
+      transform: scale(1.5);
+  }
 }
-
-.search-bar input[type="text"] {
-    padding: 5px;
-    border-radius: 20px;
-    border: #fff ;
-    outline: #555;
-    padding: 10px;
-    align-content: center;
-    background-color: #efefef;
-  }
-  
-  .search-bar button {
-    padding: 5px 10px;
-    background-color: #555;
-    border: none;
-    color: #fff;
-  }
-
-  .search-bar button {
-    border-radius: 0 20px 20px 0;
-    background-color: #ee1b22;
-    border: none;
-    color: #fff;
-    font-size: 14px;
-  }
-
-
-.galeria {
-    columns: 5 320px;
-    column-gap: 0.5em;
-    margin-bottom: 0.5em;
-    display: block;
-}
-
-.item img {
-    max-width: 100%;
-    transition: 0.5s;
-    object-fit: cover;
-}
-
-.item a img:hover {
-    transform: scale(1.2);
-}
-
-footer {
-    background-color: #333;
-    padding: 20px 0;
-    color: #fff;
-    
-  }
-  
-  .footer-container {
-    max-width: 960px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .footer-section {
-    flex-basis: 50%;
-  }
-  
-  h3 {
-    font-size: 18px;
-    margin: 0.5em;
-
-  }
-  
-  p {
-    margin: 0.5em;
-  }
-  
-  .social-icons {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center ;
-  }
-  
-  .social-icons a {
-    color: #fff;
-    margin-right: 10px;
-    font-size: 20px;
-    transition: transform 0.3s ease;
-    text-decoration: none;
-    display: flex;
-    
-    
-  }
-
-  .fab-fa-whatsapp img{
+  .mid {
     width: 50px;
-    display: flex;
-
-
+    height: 50px;
+    border-radius: 50%;
+    
+    background: radial-gradient(circle, #000, green, #000);
+  
+    z-index: 4;
+  
+    background-size: 5px 5px;
+  
+    filter: drop-shadow(0 0 8px #682600);
   }
-
-  .fab-fa-facebook img{
-    width: 50px;
-    display: flex;
-
+/*Síguenos en todas las redes como:*/
+/*Faster Academy*/
+/*Código: Daniel Arteaga de Faster Academy*/
+  .Petal1 {
+    position: absolute;
+    left: 40px;
+    z-index: 3;
+  
+    width: 120px;
+    height: 30px;
+    border-radius: 50%;
+  
+    background: radial-gradient(circle, #ff5e00, #ffbb00, green);
+  
+    filter: drop-shadow(0 0 5px #e05200, green);
   }
   
-  .social-icons a:hover {
-    transform: scale(1.2);
+  .Petal1.p1 {
+    transform: rotate(22.5deg);
+  }
+  .Petal1.p2 {
+    transform: rotate(67.5deg);
+  }
+  .Petal1.p3 {
+    transform: rotate(110.5deg);
+  }
+  .Petal1.p4 {
+    transform: rotate(157.5deg);
   }
   
+  .Petal2 {
+    position: absolute;
+    left: 0;
+    z-index: 2;
   
+    width: 200px;
+    height: 40px;
+    border-radius: 50%;
+  
+    background: radial-gradient(circle, #ff5e00, #fbd702, green);
+  
+    filter: drop-shadow(0 0 5px #e05200);
+  }
+  
+  .Petal2.p1 {
+  }
+  
+  .Petal2.p2 {
+    transform: rotate(90deg);
+  }
+  .Petal2.p3 {
+    transform: rotate(45deg);
+  }
+  
+  .Petal2.p4 {
+    transform: rotate(135deg);
+  }
+  
+  .Petal3 {
+    position: absolute;
+    left: 0px;
+    z-index: 1;
+  
+    width: 200px;
+    height: 40px;
+    border-radius: 50%;
+  
+    background: radial-gradient(circle, #ff5e00, #fbd702);
+  
+    filter: drop-shadow(0 0 2px #fbd702);
+  }
+/*Síguenos en todas las redes como:*/
+/*Faster Academy*/
+/*Código: Daniel Arteaga de Faster Academy*/
+  .Petal3.p1 {
+    transform: rotate(22.5deg);
+  }
+  .Petal3.p2 {
+    transform: rotate(67.5deg);
+  }
+  .Petal3.p3 {
+    transform: rotate(110.5deg);
+  }
+  .Petal3.p4 {
+    transform: rotate(157.5deg);
+  }
+/*Síguenos en todas las redes como:*/
+/*Faster Academy*/
+/*Código: Daniel Arteaga de Faster Academy*/
